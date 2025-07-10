@@ -4,6 +4,122 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>To-Do List | Raihan Fadhillah</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body></body>
+  <body class="bg-gradient-to-r from-[#240b36] to-[#703699]">
+    <header class="my-10">
+      <h1 class="text-center text-pink-200 text-4xl font-bold">
+        My Todo List App
+      </h1>
+    </header>
+    <main>
+      <div
+        class="zoom-in-out my-20 main-container max-w-[750px] container p-7 mx-auto bg-white/20 backdrop-blur-xl text-pink-200 rounded-lg border-2 border-white/30"
+      >
+        <div class="add-container mb-5">
+          <form class="grid grid-cols-5 gap-2">
+            <input
+              required
+              type="text"
+              name="list"
+              id="list"
+              placeholder="Add a todo..."
+              class="col-span-2 bg-black/40 backdrop-blur-xl text-pink-200 p-2 rounded-lg"
+            />
+            <input
+              required
+              class="col-span-2 bg-black/40 backdrop-blur-xl text-pink-200 p-2 rounded-lg"
+              type="date"
+              name="date"
+              id="date"
+            />
+            <button
+              type="submit"
+              class="text-2xl hover:bg-slate-700 active:bg-slate-500 transition-all duration-300 cursor-pointer bg-black/40 backdrop-blur-xl text-pink-200 p-2 rounded-lg text-center col-span-1"
+            >
+              +
+            </button>
+          </form>
+        </div>
+        <div class="menu-container flex justify-between mt-5">
+          <h1 class="text-md lg:text-xl font-bold">FILTER BERDASARKAN :</h1>
+          <button
+            id="delete-all"
+            class="text-md lg:text-xl cursor-pointer font-bold text-slate-200 bg-black/40 backdrop-blur-xl p-2 rounded-lg hover:bg-slate-700 active:bg-slate-500"
+          >
+            DELETE ALL
+          </button>
+        </div>
+        <div class="filter-container mb-5 flex flex-wrap gap-2">
+          <select
+            id="filter-status"
+            class="cursor-pointer bg-black/40 backdrop-blur-xl text-pink-200 p-2 rounded"
+          >
+            <option value="all">Semua Status</option>
+            <option value="done">Selesai</option>
+            <option value="undone">Belum Selesai</option>
+          </select>
+          <select
+            id="filter-date"
+            class="cursor-pointer bg-black/40 backdrop-blur-xl text-pink-200 p-2 rounded"
+          >
+            <option value="default">Tanggal (Default)</option>
+            <option value="asc">Tanggal Terdekat</option>
+            <option value="desc">Tanggal Terlama</option>
+          </select>
+          <select
+            id="filter-abjad"
+            class="cursor-pointer bg-black/40 backdrop-blur-xl text-pink-200 p-2 rounded"
+          >
+            <option value="default">Abjad (Default)</option>
+            <option value="az">A - Z</option>
+            <option value="za">Z - A</option>
+          </select>
+        </div>
+
+        <div
+          class="display-container text-pink-200 bg-black/40 backdrop-blur-xl p-2"
+        >
+          <table class="w-full">
+            <thead>
+              <tr>
+                <th>TASK</th>
+                <th>DUE DATE</th>
+                <th>STATUS</th>
+                <th>ACTIONS</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Apalah</th>
+                <th>2025</th>
+                <th>Terpenuhi</th>
+                <th>
+                  <button
+                    class="bg-red-500 px-2 py-1 hover:bg-red-700 active:bg-red-800 transition-all duration-300 text-sm cursor-pointer rounded-lg"
+                  >
+                    Delete?
+                  </button>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+    <footer class="">
+      <p class="text-center text-pink-200 text-lg font-thin mb-10">
+        © 2025
+        <a
+          target="_blank"
+          class="hover:text-pink-400 transiton-all duration-300"
+          href="https://github.com/NickRodeo"
+          >Raihan Fadhillah.</a
+        >
+        All rights reserved.
+      </p>
+    </footer>
+  </body>
+  <script src="./js/script.js"></script>
 </html>
