@@ -16,10 +16,12 @@
     </header>
     <main>
       <div
-        class="zoom-in-out my-20 main-container max-w-[750px] container p-7 mx-auto bg-white/20 backdrop-blur-xl text-pink-200 rounded-lg border-2 border-white/30"
+        class="zoom-in-out my-20 main-container w-full max-w-[750px] container p-7 mx-auto bg-white/20 backdrop-blur-xl text-pink-200 rounded-lg border-2 border-white/30"
       >
         <div class="add-container mb-5">
-          <form class="grid grid-cols-5 gap-2">
+          <form
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2"
+          >
             <input
               required
               type="text"
@@ -80,7 +82,7 @@
         </div>
 
         <div
-          class="display-container text-pink-200 bg-black/40 backdrop-blur-xl p-2"
+          class="display-container text-pink-200 bg-black/40 backdrop-blur-xl p-2 overflow-x-auto"
         >
           <table class="w-full">
             <thead>
