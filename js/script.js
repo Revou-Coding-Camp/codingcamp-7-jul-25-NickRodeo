@@ -111,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //Delete All
   deleteAllBtn.addEventListener("click", () => {
+    if (tasks.length <= 0) return;
     if (confirm("Yakin ingin menghapus semua tugas?")) {
       tasks = [];
       localStorage.setItem("tasks", JSON.stringify(tasks));
