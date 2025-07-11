@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
           <td class="text-center p-2">${
             task.done ? "✅ Selesai" : "❌ Belum"
           }</td>
-          <td class="text-center p-2 space-x-2 flex justify-center">
+          <td class="text-center p-2 flex flex-col md:flex-row gap-2 justify-center items-center">
             <button class="cursor-pointer bg-green-500 hover:bg-green-700 text-pink-200 px-2 py-1 rounded toggle-btn" data-index="${tasks.indexOf(
               task
             )}">
